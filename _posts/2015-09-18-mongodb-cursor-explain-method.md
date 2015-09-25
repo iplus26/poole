@@ -1,3 +1,8 @@
+---
+layout: post
+title: MongoDB cursor.explain() 方法 - 学习笔记
+---
+
 # cursor.explain()
 
 在 MongoDB 中使用 `find()` 方法返回的是一个 cursor 类型。cursor 有一个方法是 `cursor.explain()`，用途是提供 `find()` 的 query plan 的信息。在 3.0 版本中，这个方法的参数和输出格式已经发生了改变，比如我正在读的这本《七周七数据库》（2013年7月版）里面返回的结果就和最新版本的 MongoDB 返回的很不一样。

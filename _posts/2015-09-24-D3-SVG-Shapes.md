@@ -1,6 +1,5 @@
 ---
 layout: post
-category: D3
 title: D3 SVG Shapes
 ---
 

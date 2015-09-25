@@ -52,7 +52,7 @@ Disqus 对 Jekyll 十分友好，有[官方教程](https://help.disqus.com/custo
 
 这显然是 Jekyll 在编译的时候出现了一些问题，我发现这其实是 GitHub Pages 的原因，使用 GH 的 Jekyll 服务器有一些[不同](https://jekyllrb.com/docs/github-pages/)。
 
-折腾了一下午之后，我最终放弃修复这个细节，因为最后我发现 GitHub Pages [压根儿不支持 `{% post_url %}`](https://github.com/jekyll/jekyll/issues/3179)。
+折腾了一下午之后，我最终放弃修复这个细节，因为最后我发现 GitHub Pages [压根儿不支持 `post_url` 引用站内文章](https://github.com/jekyll/jekyll/issues/3179)。
 
 ### 参考
 

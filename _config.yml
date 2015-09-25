@@ -5,11 +5,11 @@ permalink:           pretty
 relative_permalinks: true
 
 # Setup
-title:               Blog
+title:               blog
 tagline:             Ivan Jiang
 url:                 http://ivanjiang.com
 paginate:            1
-baseurl:             "/poole"
+baseurl:             "/blog"
 
 # Assets
 #

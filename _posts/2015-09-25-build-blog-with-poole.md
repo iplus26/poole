@@ -57,13 +57,13 @@ Disqus 对 Jekyll 十分友好，有[官方教程](https://help.disqus.com/custo
 所以在我的 `index.html` 中，将
 
     {% highlight html %}
-    <a href="{{ post.url }}">
+    <a href="">
     {% endhighlight %}
     
 改为
 
     {% highlight html %}
-    <a href="{{ post.url }}">
+    <a href="">
     {% endhighlight %}
 
 即可影响 Jekyll 的编译。

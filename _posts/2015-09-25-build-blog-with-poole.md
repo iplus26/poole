@@ -45,13 +45,29 @@ Disqus 对 Jekyll 十分友好，有[官方教程](https://help.disqus.com/custo
 
 如果我把 `/blog` 换成 `/blog/` 就会出现三个 `/`...
 
-后来在 Jekyll 的官方文档中找到了[答案](http://jekyllrb.com/docs/permalinks/#template-variables)。因为我采用了 [*pretty*](http://jekyllrb.com/docs/permalinks/#built-in-permalink-styles) 的链接风格(permalink style)，因此我的链接格式为：
-
-    /:categories/:year/:month/:day/:title/
+<del>后来在 Jekyll 的官方文档中找到了[答案](http://jekyllrb.com/docs/permalinks/#template-variables)。因为我采用了 [*pretty*](http://jekyllrb.com/docs/permalinks/#built-in-permalink-styles) 的链接风格(permalink style)，因此我的链接格式为：`/:categories/:year/:month/:day/:title/`. </del>
     
-然而我没有对文章设置分类(category)，所以会自动输出两个斜杠。
+<del>然而我没有对文章设置分类(category)，所以会自动输出两个斜杠。</del>
 
->The specified categories for this Post. If a post has multiple categories, Jekyll will create a hierarchy (e.g. /category1/category2). Also Jekyll automatically parses out **double slashes** in the URLs, so if no categories are present, it will ignore this.
+<del>The specified categories for this Post. If a post has multiple categories, Jekyll will create a hierarchy (e.g. /category1/category2). Also Jekyll automatically parses out **double slashes** in the URLs, so if no categories are present, it will ignore this.</del>
+
+这显然是 Jekyll 在编译的时候出现了一些问题，我发现这其实是 GitHub Pages 的原因，使用 GH 的 Jekyll 服务器有一些[不同](https://jekyllrb.com/docs/github-pages/)。
+
+>When doing permalinks or internal links, do it like this: `{{ site.baseurl }}{{ post.url }} `– note that there is no slash between the two variables.
+
+所以在我的 `index.html` 中，将
+
+    {% highlight html %}
+    <a href="{{ site.baseurl }}/{{ post.url }}">
+    {% endhighlight %}
+    
+改为
+
+    {% highlight html %}
+    <a href="{{ site.baseurl }}{{ post.url }}">
+    {% endhighlight %}
+
+即可影响 Jekyll 的编译。
 
 ### 参考
 

@@ -66,11 +66,7 @@ Disqus 对 Jekyll 十分友好，有[官方教程](https://help.disqus.com/custo
     <a href="{{ site.baseurl }}{{ post.url }}">
     {% endhighlight %}
 
-即可影响 Jekyll 的编译。当我在文章内引用其他文章的时候，我需要
-
-    {% literal %}
-    {{ site.baseurl }}{% post_url 2015-09-24-d3-svg-shapes %}
-    {% endliteral %}
+即可影响 Jekyll 的编译。
 
 ### 参考
 

@@ -6,7 +6,17 @@ title: 使用 Jekyll 和 Poole 快速搭建 blog 以及评论
 
 因为昨天受累翻了[一篇 D3 的文档]({% post_url 2015-09-24-d3-svg-shapes %})，加上之前有[一篇关于 MongoDB 的短文翻译]({% post_url 2015-09-18-mongodb-cursor-explain-method %})，所以决定给自己弄个博客。之前因为嫌弃 hexo 限制太多了，想着干脆自己从头到尾搭一个博客算了，但是因为<del>一直腾不出时间</del>懒，又烂尾了。今天一早起来发现 [Poole](https://github.com/poole/poole)，于是就赶紧自己搭了一下。把遇到的坑罗列入下：
 
+## 安装
 
+
+    
+接着会弹出来一个对话框，提示安装 the Command Line tools. 
+
+安装完后即可顺利安装。
+
+## 加入 Disqus 评论框
+
+这个博客托管于 GitHub Pages，仅支持静态页面，Jekyll 的原理就是用服务器将我们的文章(posts) 加上 header, sidebar 等等编译成静态页面，在 `_site` 文件夹下。因此如果需要加上评论功能的话，我们只能借助于第三方插件，比如国外十分流行的 [Disqus](https://disqus.com) 评论框，国内有多说等，对国内的社交网络支持更好。
 
 Disqus 对 Jekyll 十分友好，有[官方教程](https://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions)指导。我还参考了 [Ankur Gupta](http://www.perfectlyrandom.org/about/) 的这篇 [Adding Disqus to your Jekyll](http://www.perfectlyrandom.org/2014/06/29/adding-disqus-to-your-jekyll-powered-github-pages/), 很详尽。
 

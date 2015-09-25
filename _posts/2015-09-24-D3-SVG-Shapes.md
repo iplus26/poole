@@ -4,9 +4,9 @@ title: D3 SVG Shapes
 ---
 
 > 基本是对 [D3 Wiki ▸ API Reference ▸ SVG ▸ SVG Shapes](https://github.com/mbostock/d3/wiki/SVG-Shapes) 文档的全文翻译，引用的内容是我的注解，极少。
-
+> 
 > 本章节讲解 shape 的使用。从标准的 [SVG](http://www.w3schools.com/svg/) 元素开始讲起，讲到 D3 的 path data generators. 随后分别讨论了
-
+> 
 > * line generator, 基本翻完
 > * area generator
 > * arc generator
@@ -64,14 +64,18 @@ SVG 有很多内置的简单形状，比如 axis-aligned rectangles 和圆形。
 
 为了简化 path 元素的 *d* 属性的构建流程，D3 包含了许多辅助生成路径数据(path data) 的类。每一个生成器就是一个数据的函数(Each generator is a function of data). 所以如果你的数据是一个 *xy* 坐标的序列，你可以定义 accessor 函数，路径生成器以此来生产路径数据。比方说，你可以定义一个线条生成器：
 
+    {% highlight javascript %}
     var line = d3.svg.line()
         .x(function(d) { return d.x; })
         .y(function(d) { return d.y; })
         .interpolate("basis");
+        {% endhighlight %}
         
 随后，你可以用这个函数来设置 *d* 属性：
 
+    {% highlight javascript %}
     g.append("path").attr("d", line);
+    {% endhighlight %}
 
 任何和 `g` 绑定的数据会被传给 `line` 实例。因此，这个数据必须是一个数组。对于 data 数组里面的每一个元素，*x*- 和 *y*-accessor 函数把控制点坐标(the control point coordinates) 提取出来。
 

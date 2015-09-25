@@ -5,11 +5,11 @@ permalink:           pretty
 relative_permalinks: true
 
 # Setup
-title:               Poole
-tagline:             The Jekyll Butler
-url:                 http://getpoole.com
+title:               Blog
+tagline:             Ivan Jiang
+url:                 http://ivanjiang.com
 paginate:            1
-baseurl:             ""
+baseurl:             "/poole"
 
 # Assets
 #
@@ -20,9 +20,9 @@ sass:
 
 # About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  name:              Ivan Jiang
+  url:               http://ivanjiang.com
+  email:             iplus26@gmail.com
 
 # Custom vars
 version:             2.0.0

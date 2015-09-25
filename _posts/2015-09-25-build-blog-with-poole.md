@@ -52,7 +52,7 @@ Disqus 对 Jekyll 十分友好，有[官方教程](https://help.disqus.com/custo
 
 这显然是 Jekyll 在编译的时候出现了一些问题，我发现这其实是 GitHub Pages 的原因，使用 GH 的 Jekyll 服务器有一些[不同](https://jekyllrb.com/docs/github-pages/)。
 
->When doing permalinks or internal links, do it like this: `{{ site.baseurl }}{{ post.url }} `– note that there is no slash between the two variables.
+>When doing permalinks or internal links, do it like this: `{{ post.url }} `– note that there is no slash between the two variables.
 
 所以在我的 `index.html` 中，将
 

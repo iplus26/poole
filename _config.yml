@@ -7,9 +7,9 @@ relative_permalinks: true
 # Setup
 title:               blog
 tagline:             Ivan Jiang
-url:                 http://ivanjiang.com/blog
+url:                 http://ivanjiang.com
 paginate:            1
-baseurl:             ""
+baseurl:             "/blog"
 description:         'Welcome to my blog. '
 comments:            true
 

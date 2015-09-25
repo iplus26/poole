@@ -1,5 +1,6 @@
 ---
 layout: post
+category: D3
 title: D3 SVG Shapes
 ---
 
@@ -89,10 +90,12 @@ d3.svg.**line**()
 
 通过修改插值，你亦可以生成 splines 和 step functions. 并且你不需担心在最后再加上路径命令(path commands). 举例来说，如果你想生成一个闭合的路径，使用一个 closepath (Z) 命令：
 
+    {% highlight javascript %}
     g.append("path")
         .attr("d", function(d) { 
             return line(d) + "Z"; 
         });
+        {% endhighlight %}
 
 线条生成器(line generator) 是为了和区域生成器(area generator) 协同而设计的。比如，生成一个 area chart 时，你可以使用一个带 fill 样式的区域生成器和是一个带 stroke 样式的线条生成器，来着重强调区域的边缘。线条生成器只用来设置 *d* 属性，你可以用标准的 SVG 样式和属性（比如*fill*, *stroke*, *stroke-width*）来定义线条的外观。
 
@@ -104,12 +107,15 @@ line.**x**([*x*])
 
 设置或返回 *x*-accessor 函数。这个 accessor 在 data 数组中的每个元素传值给线条生成器(line generator) 的时候生效。默认的 accessor 假定每个输入元素是一个 two-element array of numbers: 
 
+    {% highlight javascript %}
     function x(d) {
         return d[0];
     }
+    {% endhighlight %}
     
 一般来说，使用特定的 *x*-accessor 是因为输入的数据是不同形式的，或者说你想要使用一个比例尺(scale). 比如，如果你的数据是有 `x` 和 `y` 属性的一个对象，而不是一个元组(tuple)，你应该取消引用这些属性，并且同时应用这个比例尺。
 
+    {% highlight javascript %}
     // 使用比例尺
     var x = d3.scale.linear().range([0, w]),  
         y = d3.scale.linear().range([h, 0]);
@@ -117,6 +123,7 @@ line.**x**([*x*])
     var line = d3.svg.line()
         .x(function(d) { return x(d.x); })
         .y(function(d) { return y(d.y); });
+        {% endhighlight %}
 
 *x*-accessor 和 D3 中其他的传值函数(value functions) 生效的方式一致。函数中的 *this* 指代的是选择集中的当前元素。严格来说，*this* 同样调用了 line 函数；但是一般来说线条生成器(line generator) 传递给 attr 操作符，而 *this* 和 DOM 元素相关联。这个函数被传递了两个参数，当前的数据 datum (d) 和当前的序号 index (i). 在此，序号(index) 指的是关键点数组的序号(the index into the array of control points)，而不是当前元素在选择集中的序号。*x*-accessor 在每个数据处被使用一次，按照 data 数组指定的顺序。因此，指定一个不确定的 accessor 是可以实现的，比如一个随机数生成器。将 *x*-accessor 指定为一个常数，而不是一个函数，也是被允许的，这样一来所有点的 *x* 坐标就都一样了。
 
@@ -147,9 +154,11 @@ line.**interpolate**([*interpolate*])
 
 如果 *interpolate* 是一个函数，那么这个函数将会把以这样形式 ([[x0, y0], [x1, y1], ...]) 表示点的数组，转换成一个 SVG 路径数据的字符串，用来显示这条线。字符串开头的 M 是暗含的，不应该被返回。举个例子，线性插值(linear interpolation) 应该按如下方式实现：
 
+    {% highlight javascript %}
     function interpolateLinear(points) {
       return points.join("L");
     }
+    {% endhighlight %}
 
 line.**tension**([*tension*])
 
@@ -157,12 +166,14 @@ line.**tension**([*tension*])
 
 注意 tension 只能够被指定为一个常数，而不可以是一个函数。但是仍然有途径能够使用同一个生成器(generator) 生成不同 tension 值的几条线，比如：
 
+    {% highlight javascript %}
     svg.selectAll("path")
         .data([0, 0.2, 0.4, 0.6, 0.8, 1])
         .enter().append("path")
         .attr("d", function(d) { 
             return line.tension(d)(data);
         });
+        {% endhighlight %}
         
 在这个例子中，tension 在线条生成器每次被调用之前被设置，因此可以由相同的数据生成不同的路径。
 
@@ -194,4 +205,4 @@ line.**defined**([*defined*])
 
 d3.svg.**area**()
 
-累惨了，我不翻了 - -
+至此，基本将 line generator 部分翻译完了，其他部分请读者自行脑补。

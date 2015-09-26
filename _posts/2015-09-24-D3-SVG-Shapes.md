@@ -1,7 +1,7 @@
 ---
 layout: post
 title: D3 SVG Shapes
-tags: [D3, JavaScript, visualization]
+tags: [D3, JavaScript, visualization 可视化]
 
 ---
 

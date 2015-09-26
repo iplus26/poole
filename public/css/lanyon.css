@@ -574,7 +574,8 @@ font {
   font-family: Menlo, Monaco, "Courier New", monospace;
 }
 
-.tag-box {
+.tag-box,
+.home-posts {
     list-style: none;
     margin: 0;
     padding: 4px 0;

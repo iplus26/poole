@@ -5,7 +5,7 @@ title: Home
 
 <div id="home">
   <h1>Posts</h1>
-  <ul class="posts">
+  <ul class="posts home-posts">
     {% for post in site.posts %}
       {% if post.layout != "none" %}
       <li>{% if post.category == "speaking" %}<i class="fa fa-microphone"></i> {% endif %}<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><span> &raquo; {{ post.date | date: "%B %d, %Y" }}</span></li>

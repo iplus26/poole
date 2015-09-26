@@ -88,5 +88,6 @@ ordinal.**rangeBands**(*interval*[, *padding*[, *outerPadding*]])
     o.rangeBand(); // 33.333333333333336
     o.range(); // [0, 33.333333333333336, 66.66666666666667]
     o.rangeExtent(); // [0, 100]
+    {% endhighlight %}
 
 >注意上述代码中的 rangeBand() 方法和上述提到的 rangeBands() 方法的区别，rangeBand() 用于返回当前的分段的长度。rangeBand() 和 rangeExtent() 方法将在下面讲到。

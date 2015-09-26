@@ -5,8 +5,8 @@ permalink:           pretty
 relative_permalinks: true
 
 # Setup
-title:               blog
-tagline:             by Ivan Jiang
+title:               Ivan Jiang's blog
+tagline:             so live ever - or else swoon to death.
 url:                 http://ivanjiang.com
 paginate:            1
 baseurl:             /blog

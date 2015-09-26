@@ -116,39 +116,39 @@ d3.scale.**category10**()
 
 用十个 categorical colors 构造一个新的 ordinal scale: 
 
-* <font color="#1F77B4">**`#1F77B4`**</font>
-* <font color="#FF7F0E">**`#FF7F0E`**</font>
-* <font color="#2CA02C">**`#2CA02C`**</font>
-* <font color="#D62728">**`#D62728`**</font>
-* <font color="#9467BD">**`#9467BD`**</font>
-* <font color="#8C564B">**`#8C564B`**</font>
-* <font color="#E377C2">**`#E377C2`**</font>
-* <font color="#7F7F7F">**`#7F7F7F`**</font>
-* <font color="#BCBD22">**`#BCBD22`**</font>
-* <font color="#17BECF">**`#17BECF`**</font>
+* <font color="#1F77B4">#1F77B4</font>
+* <font color="#FF7F0E">#FF7F0E</font>
+* <font color="#2CA02C">#2CA02C</font>
+* <font color="#D62728">#D62728</font>
+* <font color="#9467BD">#9467BD</font>
+* <font color="#8C564B">#8C564B</font>
+* <font color="#E377C2">#E377C2</font>
+* <font color="#7F7F7F">#7F7F7F</font>
+* <font color="#BCBD22">#BCBD22</font>
+* <font color="#17BECF">#17BECF</font>
 
 d3.scale.**category20**()
 
-* <font color="#1f77b4">**`#1f77b4`**</font>
-* <font color="#aec7e8">**`#aec7e8`**</font>
-* <font color="#ff7f0e">**`#ff7f0e`**</font>
-* <font color="#ffbb78">**`#ffbb78`**</font>
-* <font color="#2ca02c">**`#2ca02c`**</font>
-* <font color="#98df8a">**`#98df8a`**</font>
-* <font color="#d62728">**`#d62728`**</font>
-* <font color="#ff9896">**`#ff9896`**</font>
-* <font color="#9467bd">**`#9467bd`**</font>
-* <font color="#c5b0d5">**`#c5b0d5`**</font>
-* <font color="#8c564b">**`#8c564b`**</font>
-* <font color="#c49c94">**`#c49c94`**</font>
-* <font color="#e377c2">**`#e377c2`**</font>
-* <font color="#f7b6d2">**`#f7b6d2`**</font>
-* <font color="#7f7f7f">**`#7f7f7f`**</font>
-* <font color="#c7c7c7">**`#c7c7c7`**</font>
-* <font color="#bcbd22">**`#bcbd22`**</font>
-* <font color="#dbdb8d">**`#dbdb8d`**</font>
-* <font color="#17becf">**`#17becf`**</font>
-* <font color="#9edae5">**`#9edae5`**</font>
+* <font color="#1f77b4">#1f77b4</font>
+* <font color="#aec7e8">#aec7e8</font>
+* <font color="#ff7f0e">#ff7f0e</font>
+* <font color="#ffbb78">#ffbb78</font>
+* <font color="#2ca02c">#2ca02c</font>
+* <font color="#98df8a">#98df8a</font>
+* <font color="#d62728">#d62728</font>
+* <font color="#ff9896">#ff9896</font>
+* <font color="#9467bd">#9467bd</font>
+* <font color="#c5b0d5">#c5b0d5</font>
+* <font color="#8c564b">#8c564b</font>
+* <font color="#c49c94">#c49c94</font>
+* <font color="#e377c2">#e377c2</font>
+* <font color="#f7b6d2">#f7b6d2</font>
+* <font color="#7f7f7f">#7f7f7f</font>
+* <font color="#c7c7c7">#c7c7c7</font>
+* <font color="#bcbd22">#bcbd22</font>
+* <font color="#dbdb8d">#dbdb8d</font>
+* <font color="#17becf">#17becf</font>
+* <font color="#9edae5">#9edae5</font>
 
 还有 d3.scale.**category20b**() 和 d3.scale.**category20c**() 也是用 20 种颜色构造 ordinal scale. 
 

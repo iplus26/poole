@@ -13,11 +13,15 @@
  * https://github.com/poole/lanyon.
  */
 
+ /****************** 
+                      Modified on demand by Ivan Jiang
+                                                          ************* /
+
 
 /*
  * Contents
  *
- * Global resets
+ * Global resets  
  * Masthead
  * Sidebar
  * Slide effect
@@ -51,6 +55,9 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -.025rem;
 }
 
+font {
+  text-transform: uppercase;
+}
 
 /*
  * Wrapper

@@ -32,7 +32,7 @@ ordinal.**range**([*values*])
 
 如果 *values* 被指定了，将这个数组设置为 ordinal scale 的值域。*values* 的第一个元素会被映射为定义域的第一个元素，第二个元素会被映射为定义域的第二个元素，以此类推。如果值域中的元素少于定义域中的元素，scale 将会从值域的第一个元素开始循环。如果 *values* 未指定，那么这个函数将会返回当前的值域。
 
-这个函数是为明确计算离散的输出值时准备的，比如一组可分类的颜色值。在其他情况下，比如计算散布图(ordinal scatterplot) 或是柱状图(bar chart) 的布局的时候，你可以使用 rangePoints 或者 rangeBands 更方便一些。
+这个函数是为明确计算离散的输出值时准备的，比如一组 categorical colors（下面有讲）。在其他情况下，比如计算散布图(ordinal scatterplot) 或是柱状图(bar chart) 的布局的时候，你可以使用 rangePoints 或者 rangeBands 更方便一些。
 
 ordinal.**rangePoints**(*interval*[, *padding*])
 
@@ -91,3 +91,77 @@ ordinal.**rangeBands**(*interval*[, *padding*[, *outerPadding*]])
     {% endhighlight %}
 
 >注意上述代码中的 rangeBand() 方法和上述提到的 rangeBands() 方法的区别，rangeBand() 用于返回当前的分段的长度。rangeBand() 和 rangeExtent() 方法将在下面讲到。
+
+ordinal.**rangeRoundBands**(*interval*[, *padding*[, *outerPadding*]])
+
+rangeRoundBands() 方法和 rangeBands() 的关系，与 rangeRound() 和 range() 的关系是一样的，请自行脑补。
+
+ordinal.**rangeBand**()
+
+返回分段的宽度。When the scale's range is configured with rangeBands or rangeRoundBands, the scale returns the lower value for the given input. The upper value can then be computed by offsetting by the band width. 如果 scale 的值域是由 range() 或 rangePoints() 设置的，那么分段宽度为 0. 
+
+ordinal.**rangeExtent**()
+
+返回一个 two-element 数组，表示值域的大小，比如最小值和最大值。
+
+ordinal.**copy**()
+
+返回当前 scale 的一个副本。改变当前的 scale 并不会影响返回的 scale, 反之亦然。
+
+>只有 domain(), range(), rangeBand(), rangeExtent(), copy() 会返回值，而不是 scale 对象。
+
+## Categorical Colors
+
+d3.scale.**category10**()
+
+用十个 categorical colors 构造一个新的 ordinal scale: 
+
+* <font color="#1F77B4">**`#1F77B4`**</font>
+* <font color="#FF7F0E">**`#FF7F0E`**</font>
+* <font color="#2CA02C">**`#2CA02C`**</font>
+* <font color="#D62728">**`#D62728`**</font>
+* <font color="#9467BD">**`#9467BD`**</font>
+* <font color="#8C564B">**`#8C564B`**</font>
+* <font color="#E377C2">**`#E377C2`**</font>
+* <font color="#7F7F7F">**`#7F7F7F`**</font>
+* <font color="#BCBD22">**`#BCBD22`**</font>
+* <font color="#17BECF">**`#17BECF`**</font>
+
+d3.scale.**category20**()
+
+* <font color="#1f77b4">**`#1f77b4`**</font>
+* <font color="#aec7e8">**`#aec7e8`**</font>
+* <font color="#ff7f0e">**`#ff7f0e`**</font>
+* <font color="#ffbb78">**`#ffbb78`**</font>
+* <font color="#2ca02c">**`#2ca02c`**</font>
+* <font color="#98df8a">**`#98df8a`**</font>
+* <font color="#d62728">**`#d62728`**</font>
+* <font color="#ff9896">**`#ff9896`**</font>
+* <font color="#9467bd">**`#9467bd`**</font>
+* <font color="#c5b0d5">**`#c5b0d5`**</font>
+* <font color="#8c564b">**`#8c564b`**</font>
+* <font color="#c49c94">**`#c49c94`**</font>
+* <font color="#e377c2">**`#e377c2`**</font>
+* <font color="#f7b6d2">**`#f7b6d2`**</font>
+* <font color="#7f7f7f">**`#7f7f7f`**</font>
+* <font color="#c7c7c7">**`#c7c7c7`**</font>
+* <font color="#bcbd22">**`#bcbd22`**</font>
+* <font color="#dbdb8d">**`#dbdb8d`**</font>
+* <font color="#17becf">**`#17becf`**</font>
+* <font color="#9edae5">**`#9edae5`**</font>
+
+还有 d3.scale.**category20b**() 和 d3.scale.**category20c**() 也是用 20 种颜色构造 ordinal scale. 
+
+## ColorBrewer
+
+D3 也捆绑了一些非常棒的 categorical color scales, 作者是 [Cynthia Brewer](http://colorbrewer2.org/). 你可以在 [lib/colorbrewer](https://github.com/mbostock/d3/tree/master/lib/colorbrewer) 找到这些颜色的 CSS 或 JavaScript. 
+
+在 CSS 中，将你的目标元素的 class 定为 q0-3, q1-3, 或 q2-3. 然后将它的父元素（比如 SVG 元素）的 class 设置为你想要的 color scale 的名字，比如 RdBu 或 Blues. 比如这个 [calendar heatmap](http://mbostock.github.com/d3/talk/20111116/calendar.html) 或者 [choropleth](http://mbostock.github.com/d3/talk/20111018/choropleth.html).
+
+在 JavaScript 中，你可以用 colorbrewer.RdBu[9] 或者其他类似的形式设定为一个 ordinal scale 的值域，比如：
+
+	{% highlight javascript %}
+	var o = d3.scale.ordinal()
+	     .domain(["foo", "bar", "baz"])
+	    .range(colorbrewer.RdBu[9]);
+	{% endhighlight %}

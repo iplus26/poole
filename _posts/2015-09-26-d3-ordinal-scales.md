@@ -1,6 +1,6 @@
 ---
 layout: post
-tag: [d3, JavaScript, visualization]
+tag: [D3, JavaScript, visualization]
 title: D3 Ordinal Scales
 
 ---

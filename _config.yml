@@ -6,7 +6,7 @@ relative_permalinks: true
 
 # Setup
 title:               blog
-tagline:             Ivan Jiang
+tagline:             by Ivan Jiang
 url:                 http://ivanjiang.com
 paginate:            1
 baseurl:             /blog

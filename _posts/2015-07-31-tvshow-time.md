@@ -1,7 +1,8 @@
 ---
 layout: post
-tag: TVShow Time, iOS App
 title: TVShow Time 懒人专用追剧社区
+tag: [TVShow Time, iOS App]
+comments: true
 ---
 
 为了消除一些读者可能产生的困惑，原文发于我的个人公众号：果冻，zhendekeyixi

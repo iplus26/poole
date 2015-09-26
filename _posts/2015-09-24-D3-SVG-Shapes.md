@@ -1,6 +1,8 @@
 ---
 layout: post
 title: D3 SVG Shapes
+tags: [d3, JavaScript, visualization]
+
 ---
 
 > 基本是对 [D3 Wiki ▸ API Reference ▸ SVG ▸ SVG Shapes](https://github.com/mbostock/d3/wiki/SVG-Shapes) 文档的全文翻译，引用的内容是我的注解，极少。

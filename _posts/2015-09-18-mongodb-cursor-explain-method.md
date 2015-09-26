@@ -1,6 +1,7 @@
 ---
 layout: post
 title: MongoDB cursor.explain() 方法 - 学习笔记
+tags: [MongoDB, database]
 ---
 
 # cursor.explain()

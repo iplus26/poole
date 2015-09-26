@@ -1,6 +1,6 @@
 ---
 layout: post
-tag: UX, iOS
+tag: [UX, iOS]
 title: 为什么 iPhone 锁屏的时候要发出咔嚓声，iOS 7 又为何取消了解锁声音？
 ---
 这是一个知乎问题，这个问题可以拆解成两个部分：

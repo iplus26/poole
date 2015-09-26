@@ -57,6 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 
 font {
   text-transform: uppercase;
+  font-family: Menlo, Monaco, "Courier New", monospace;
 }
 
 /*

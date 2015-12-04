@@ -45,11 +45,11 @@ body {
 }
 
 html {
-  font-family: 'PT Sans', 'Helvetica Neue', Helvetica, 'Nimbus Sans L', Arial, 'Liberation Sans', 'Hiragino Sans GB', 'Microsoft YaHei', 'Wenquanyi Micro Hei', 'WenQuanYi Zen Hei', 'ST Heiti', SimHei, 'WenQuanYi Zen Hei Sharp', sans-serif;
+  font-family: 'PT Sans', Helvetica, 'Nimbus Sans L', Arial, 'Liberation Sans', 'Hiragino Sans GB', 'Microsoft YaHei', 'Wenquanyi Micro Hei', 'WenQuanYi Zen Hei', 'ST Heiti', SimHei, 'WenQuanYi Zen Hei Sharp', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'PT Sans', 'Helvetica Neue', Helvetica, 'Nimbus Sans L', Arial, 'Liberation Sans', 'Hiragino Sans GB', 'Microsoft YaHei', 'Wenquanyi Micro Hei', 'WenQuanYi Zen Hei', 'ST Heiti', SimHei, 'WenQuanYi Zen Hei Sharp', sans-serif;
+  font-family: 'PT Sans', Helvetica, 'Nimbus Sans L', Arial, 'Liberation Sans', 'Hiragino Sans GB', 'Microsoft YaHei', 'Wenquanyi Micro Hei', 'WenQuanYi Zen Hei', 'ST Heiti', SimHei, 'WenQuanYi Zen Hei Sharp', sans-serif;
   font-weight: 400;
   color: #313131;
   letter-spacing: -.025rem;
@@ -574,11 +574,15 @@ font {
   font-family: Menlo, Monaco, "Courier New", monospace;
 }
 
+#tags {
+  margin-bottom: 20px;
+}
+
 .tag-box,
 .home-posts {
     list-style: none;
-    /*margin: 0;
-    padding: 4px 0;*/
+    margin: 0;
+    padding: 4px 0;
     overflow: hidden;
     *zoom: 1
 }

@@ -77,8 +77,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .container {
   max-width: 28rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 @media (min-width: 38em) {
   .container {
@@ -619,4 +617,9 @@ font {
     vertical-align: super;
     font-size: 10px;
     font-size: 0.625rem
+}
+
+.content {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }

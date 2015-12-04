@@ -577,8 +577,8 @@ font {
 .tag-box,
 .home-posts {
     list-style: none;
-    margin: 0;
-    padding: 4px 0;
+    /*margin: 0;
+    padding: 4px 0;*/
     overflow: hidden;
     *zoom: 1
 }

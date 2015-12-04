@@ -7,6 +7,7 @@ permalink:           pretty
 title:               Ivan Jiang's blog
 tagline:             so live ever - or else swoon to death.
 url:                 http://ivanjiang.com
+gems: 				 [jekyll-paginate, jekyll-gist]
 paginate:            1
 baseurl:             /blog
 description:         'Welcome to my blog. '

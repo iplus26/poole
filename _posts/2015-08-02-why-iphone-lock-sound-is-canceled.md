@@ -2,13 +2,16 @@
 layout: post
 tag: [UX, iOS]
 title: 为什么 iPhone 锁屏的时候要发出咔嚓声，iOS 7 又为何取消了解锁声音？
+bannerContent: "iphone-sound-icon"
+bannerColor: "lightgray"
+description: "本篇文章是我在知乎上回答的一个关于用户体验的问题的答案，分别对「为什么 iPhone 可以去掉解锁的声音、但是不能去掉锁屏声音？」和「为什么 iOS 7 取消了解锁声音？」两个子问题进行了回答。"
 ---
 这是一个知乎问题，这个问题可以拆解成两个部分：
 
 * 为什么 iPhone 可以去掉解锁的声音、但是不能去掉锁屏声音？
 * 为什么 iOS 7 取消了解锁声音？
 
-第一个子问题的答案可以参考知乎上[邝石的回答](http://www.zhihu.com/question/21688507/answer/19017663)，解释了可以去掉解锁的声音、但是不能去掉锁屏声音的原因。
+第一个子问题的答案可以参考知乎上[邝石的回答][1]，解释了可以去掉解锁的声音、但是不能去掉锁屏声音的原因。
 
 然而并没有讲到为什么 iOS 7 之前（包括 iOS 7 的几个 beta 版本）是有解锁声的，而 iOS 7 去掉了解锁声音。用「解锁声音没必要」这样的说法是讲不通的，因为毕竟解锁声音伴随了那么多代 iOS，并且也是非常经典的一个设计。
 
@@ -18,10 +21,14 @@ title: 为什么 iPhone 锁屏的时候要发出咔嚓声，iOS 7 又为何取�
 
 关于 iOS 7 开始改变解锁设计的另一个证明是，iOS 一直在弱化「滑动解锁」这个概念，从 iOS 6 跳到 iOS 7 去掉了拟物的滑块、解锁框，后来 iOS 7.1 又将白色的提示解锁的文字改成了更低调的深色。在 iPhone 5s 之后支持指纹解锁的机器中，点亮屏幕的时候是不显示提示文字的，过几秒才会提示「滑动来解锁」（左图 iOS 7，中图 iOS 7.1，右图 iPhone 6）
 
-![](https://mmbiz.qlogo.cn/mmbiz/VgkPiaf2BgBiau1sMscmKHkPMMSPRyXA3QvFKgCuLvjAxAWUibb32WzhJlSx3licibTrfZjhlTR0hp2hAVcibx4WUwJw/0?wx_fmt=png)
+![][image-1]
 
 另外一点就是随着智能设备的普及，人们对智能手机的交互有了一个基本的认知，渐渐地熟悉了「滑动解锁」这个操作，现在随便拿出一台智能手机，不管是 iPhone 还是安卓还是 Windows Phone，我都知道去尝试滑动解锁（苹果去年还将滑动解锁注册了专利，确实这一点大部分安卓手机都是借鉴了 iPhone 的）。相信等指纹解锁体验更好了、更普及了，大家又会觉得手机解锁 = 摸一下。
 
 另外如果点亮屏幕之后没有解锁的话，iPhone 会有一行小字提示「滑动来解锁」，也跟之前那个「移动滑块来解锁」不是一个概念了，之前移动滑块后键盘会跟着滑动动作上升，现在更像是把「滑动界面」，转到一个输入密码的界面来解锁。我想可能以后还会有更好的方式调出键盘，作为指纹解锁的补充吧，毕竟现在这个解决方案其实还不是很直观。
 
 **综上，对于这个问题「为什么 iPhone 锁屏的时候要发出咔嚓声，iOS 7 又为何取消了解锁声音？」的回答是，一是给用户一个反馈，告诉用户锁屏成功，而解锁是由视觉上的反馈来进行补充的；二来，iOS 7 开始，解锁方式发生了改变，并且人们对于智能设备的交互有了一定认知，故去掉了解锁的声音。**
+
+[1]:	http://www.zhihu.com/question/21688507/answer/19017663
+
+[image-1]:	https://mmbiz.qlogo.cn/mmbiz/VgkPiaf2BgBiau1sMscmKHkPMMSPRyXA3QvFKgCuLvjAxAWUibb32WzhJlSx3licibTrfZjhlTR0hp2hAVcibx4WUwJw/0?wx_fmt=png

@@ -3,6 +3,9 @@ layout: post
 title: TVShow Time 懒人专用追剧社区
 tag: [TVShow Time, iOS App]
 comments: true
+bannerContent: "tvshowtime-logo"
+bannerColor: "yellow"
+description: "今天和大家推荐的是 TVShow Time。在一年之前，我最爱的追剧 App 是 TeeVee (根据果冻的菜单可以找到那篇文章)，现在虽然 TeeVee 仍是我的心头爱，但是已被我卸载，而主力使用 TVShow Time。"
 ---
 
 为了消除一些读者可能产生的困惑，原文发于我的个人公众号：果冻，zhendekeyixi
@@ -16,26 +19,31 @@ comments: true
 
 不同于 TeeVee, TVShow Time 是一个追剧的社区，有很多歪果仁在这里标记自己喜欢的美剧、添加评论、吐槽。比如下图是歪果仁对美国湖南卫视 CW 台的青春偶像剧《吸血鬼日记》 S06E18 的吐槽。
 
-![](https://mmbiz.qlogo.cn/mmbiz/VgkPiaf2BgBjZibrrj0fk7ECFBXWZ8pmsNEAVeibuSwiaNPd01OteRFoJdA3uGezzeRRmdC2qIrL06D47CoUsmaPfQ/0?wx_fmt=png)
+![][image-1]
 
 一开始的时候，这种社区的形式并没有让我提起兴趣，要知道我可是只有在懒得下电影的时候才会去看 B 站，并且每次都关掉弹幕，至今都搞没有明白「男友力 MAX」是什么意思的原始人类。
 
 然而这个网站吸引我的是添加评论的形式：**拉动进度条选取截图**。
 
-![](https://mmbiz.qlogo.cn/mmbiz/VgkPiaf2BgBjZibrrj0fk7ECFBXWZ8pmsNVSj5CctHzk5SmGic0aDycfTwY0dDPSkEu0HsUQGZVIia5p5DVRFv6y1w/0?wx_fmt=png)
+![][image-2]
 
 多少次看完电影、美剧之后没有人分享？或者想要分享但是想想没有截图，又懒得复述剧情又无疾而终？TVShow Time 让这个过程变得简单起来，一来你不需要预先截图，只需要看完之后打开网站拖动进度条即可，二来网友们都是这剧的粉丝，很容易引起共鸣，终于看完剧有人交流啦！
 
 除了剧照截图之外，还可以很方便地选取表情和添加文字，歪果仁也很爱暴走漫画。另外还可以学到新单词，Shirtless, 意为光着上身的。
 
-![](https://mmbiz.qlogo.cn/mmbiz/VgkPiaf2BgBjZibrrj0fk7ECFBXWZ8pmsN9m4dDuq1Z4SaFQLlKR6CoGkqI1yKP3dGYj1D3TBVaoXaYANpiaEibCGg/0?wx_fmt=jpeg)
+![][image-3]
 
 TVShow Time 的 iOS App 一直在更新，一直很难用。但是我刚刚打开的时候神奇地发现新版本更换了 UI, 并且速度终于杠杠的<sup>2</sup>。
 
-![](https://mmbiz.qlogo.cn/mmbiz/VgkPiaf2BgBjZibrrj0fk7ECFBXWZ8pmsNHYgmiafZnN6QEvIoN2xZ8ere9we0fvxNxfD03QSz3CrCvXib5SH7d7uQ/0?wx_fmt=jpeg)
+![][image-4]
 
 当然，TVShow Time 从始至终吸引我的都是它把你标记看过的所有美剧的时长都加起来，然后和好友排名。比如我所有的剧集加起来一共看了 17 个日夜，是不是很爽呢？We are all living a numerous life. 
 
 注<sup>1</sup>：一种超好用的书写方式，流行于程序猿中，比如说两个星号中间的字加粗，井号后面的字大写等等。
 
 注<sup>2</sup>：iOS 7 开始的「自动更新」功能，总是让你在神不知鬼不觉中升级 App, 这是苹果公司的黑科技。
+
+[image-1]:	https://mmbiz.qlogo.cn/mmbiz/VgkPiaf2BgBjZibrrj0fk7ECFBXWZ8pmsNEAVeibuSwiaNPd01OteRFoJdA3uGezzeRRmdC2qIrL06D47CoUsmaPfQ/0?wx_fmt=png
+[image-2]:	https://mmbiz.qlogo.cn/mmbiz/VgkPiaf2BgBjZibrrj0fk7ECFBXWZ8pmsNVSj5CctHzk5SmGic0aDycfTwY0dDPSkEu0HsUQGZVIia5p5DVRFv6y1w/0?wx_fmt=png
+[image-3]:	https://mmbiz.qlogo.cn/mmbiz/VgkPiaf2BgBjZibrrj0fk7ECFBXWZ8pmsN9m4dDuq1Z4SaFQLlKR6CoGkqI1yKP3dGYj1D3TBVaoXaYANpiaEibCGg/0?wx_fmt=jpeg
+[image-4]:	https://mmbiz.qlogo.cn/mmbiz/VgkPiaf2BgBjZibrrj0fk7ECFBXWZ8pmsNHYgmiafZnN6QEvIoN2xZ8ere9we0fvxNxfD03QSz3CrCvXib5SH7d7uQ/0?wx_fmt=jpeg

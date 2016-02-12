@@ -1,49 +1,50 @@
 ---
 layout: post
 title: 学习 Hierarchical Edge Bundling 小记
-description: "我需要实现一个 Hierarchical Edge Bundling 的关系图，这是学习的一部分笔记"
+description: "我需要实现一个 Hierarchical Edge Bundling 的关系图，这是学习的一部分笔记。"
 tags: [D3, visualization 可视化, JavaScript]
-
+bannerContent: "d3-logo"
+bannerColor: "green"
 ---
 
 本来已经困得不行了，洗了个澡又清醒一点。十点钟去睡觉似乎有点早（刚刚九点钟的时候想去睡觉就可以叫做 dramatic），再说还有做不完的事情等着我（奋斗脸）。
 
-实习的公司 boss 叫我想法儿实现一个 [Hierarchical Edge Bundling](http://bl.ocks.org/mbostock/1044242), 这里还有一个[高亮线条的版本](http://bl.ocks.org/mbostock/7607999)。
+实习的公司 boss 叫我想法儿实现一个 [Hierarchical Edge Bundling][1], 这里还有一个[高亮线条的版本][2]。
 
 {% gist 1044242 readme.md %}
 
-这两天看了 [SVG Shapes](http://ivanjiang.com/blog/2015/09/24/D3-SVG-Shapes/) 和 [Ordinal Scales](http://ivanjiang.com/blog/2015/09/26/d3-ordinal-scales/) 的文档，然后翻译了一下。看英文文档对我来说是一件非常枯燥而漫长的事情，主要还是语言上的障碍，自然是没有母语看起来顺畅的，有些句子不参考代码或图示还是不明白是什么意思。但是这样做的好处是，一来看英文文档能够让我对这个东西的理解更深入，避免拾人牙慧，英语非母语而学编程的一个缺陷在于，有很多英语本身的暗示你得不到，比如 var 是 variable 的缩写，p 标签是 paragraph 的缩写，这样理解有可能会有偏差，看原文某种程度上弥补一下；二来通过翻译这件事儿，我能够很专注，不会漏掉一个句子，顶多翻不完，但是翻过的印象还是比较深刻的。
+这两天看了 [SVG Shapes][3] 和 [Ordinal Scales][4] 的文档，然后翻译了一下。看英文文档对我来说是一件非常枯燥而漫长的事情，主要还是语言上的障碍，自然是没有母语看起来顺畅的，有些句子不参考代码或图示还是不明白是什么意思。但是这样做的好处是，一来看英文文档能够让我对这个东西的理解更深入，避免拾人牙慧，英语非母语而学编程的一个缺陷在于，有很多英语本身的暗示你得不到，比如 var 是 variable 的缩写，p 标签是 paragraph 的缩写，这样理解有可能会有偏差，看原文某种程度上弥补一下；二来通过翻译这件事儿，我能够很专注，不会漏掉一个句子，顶多翻不完，但是翻过的印象还是比较深刻的。
 
-而  [Hierarchical Edge Bundling](http://bl.ocks.org/mbostock/1044242) 这个关系图里面，主要用到了
+而  [Hierarchical Edge Bundling][5] 这个关系图里面，主要用到了
 
-* [集群(Cluster Layout)](https://github.com/mbostock/d3/wiki/Cluster-Layout), 实际上是[层级布局(Hierarchy Layout)](https://github.com/mbostock/d3/wiki/Hierarchy-Layout) 的一个实现(implement). 
-* [Bundle Layout](https://github.com/mbostock/d3/wiki/Bundle-Layout)
-* Line, 这个是我之前翻的[那篇](http://ivanjiang.com/blog/2015/09/24/D3-SVG-Shapes/)的部分
-* [d3.json](https://github.com/mbostock/d3/wiki/Requests#d3_json), 用来获取外部的 json 数据作图
+* [集群(Cluster Layout)][6], 实际上是[层级布局(Hierarchy Layout)][7] 的一个实现(implement). 
+* [Bundle Layout][8]
+* Line, 这个是我之前翻的[那篇][9]的部分
+* [d3.json][10], 用来获取外部的 json 数据作图
 
 因为我对数学很头大，所以我们挑一些简单的关系来看一下这个图到底是什么意思：
 
 {% highlight json %}
-    {"name":"flare.physics.DragForce","size":1082,"imports":["flare.physics.Simulation","flare.physics.Particle","flare.physics.IForce"]},
+	{"name":"flare.physics.DragForce","size":1082,"imports":["flare.physics.Simulation","flare.physics.Particle","flare.physics.IForce"]},
 {% endhighlight %}
 
 {% highlight json %}
-    {"name":"flare.physics.Simulation","size":9983,"imports":["flare.physics.Particle","flare.physics.NBodyForce","flare.physics.DragForce","flare.physics.GravityForce","flare.physics.Spring","flare.physics.SpringForce","flare.physics.IForce"]},
+	{"name":"flare.physics.Simulation","size":9983,"imports":["flare.physics.Particle","flare.physics.NBodyForce","flare.physics.DragForce","flare.physics.GravityForce","flare.physics.Spring","flare.physics.SpringForce","flare.physics.IForce"]},
 {% endhighlight %}
 
 {% highlight json %}
-    {"name":"flare.vis.operator.layout.ForceDirectedLayout","size":8411,"imports":["flare.physics.Simulation","flare.animate.Transitioner","flare.vis.data.NodeSprite","flare.vis.data.DataSprite","flare.physics.Particle","flare.physics.Spring","flare.vis.operator.layout.Layout","flare.vis.data.EdgeSprite","flare.vis.data.Data"]},
+	{"name":"flare.vis.operator.layout.ForceDirectedLayout","size":8411,"imports":["flare.physics.Simulation","flare.animate.Transitioner","flare.vis.data.NodeSprite","flare.vis.data.DataSprite","flare.physics.Particle","flare.physics.Spring","flare.vis.operator.layout.Layout","flare.vis.data.EdgeSprite","flare.vis.data.Data"]},
 {% endhighlight %}
 
 这幅图就是一个软件依赖图。具体来说，`DragForce` 是属于 `physics` 这个包里的；如果你想要使用 `physics.DragForce`包，因为它依赖 `Simulation`, `Particle`, `IForce` 这三个包，所以需要 import 它们。所以 **import** 关系是一个单向链，不会存在循环。
 
 ## Bundle Layout
 
-这是对 Danny Holten 的 [hierarchical edge bundling](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.220.8113&rep=rep1&type=pdf) 算法的实现。对于每个输入的链接，都会生成一条路径，连接最仅共同祖先(the least common ancestor) 的父级(the parent hierarchy), 和目标节点。这一系列的节点可以和其他的层级布局(hierarchical layout)](https://github.com/mbostock/d3/wiki/Hierarchy-Layout) 一起使用，比如集群(cluster), 以在节点之间生成 bundled splines. 
+这是对 Danny Holten 的 [hierarchical edge bundling][11] 算法的实现。对于每个输入的链接，都会生成一条路径，连接最仅共同祖先(the least common ancestor) 的父级(the parent hierarchy), 和目标节点。这一系列的节点可以和其他的层级布局(hierarchical layout)](https://github.com/mbostock/d3/wiki/Hierarchy-Layout) 一起使用，比如集群(cluster), 以在节点之间生成 bundled splines. 
 
-![](https://github.com/mbostock/d3/wiki/bundle.png)
+![][image-1]
 
-举个例子，你可以参考[软件依赖(software dependencies)](http://bl.ocks.org/mbostock/1044242) 的可视化。
+举个例子，你可以参考[软件依赖(software dependencies)][12] 的可视化。
 
 d3.layout.**bundle**()
 
@@ -60,30 +61,29 @@ d3.layout.**bundle**()
 
 * parent - 父节点
 
-这是 [hierarchy layouts](https://github.com/mbostock/d3/wiki/Hierarchy-Layout) 生成的一个子集，返回值是一个路径的数组，每一条路径都是由节点的数组表示的。因此，bundle 布局并不直接计算基本的线条(the basis splines); 而是返回一个节点数组，隐含地表示线条的控制点(the control points). 你可以将这个数组和 d3.svg.line 或者 d3.svg.line.radial 联合起来使用，以生成线条(splines). 举个例子，如果你想要使用一个 cluster: 
+这是 [hierarchy layouts][13] 生成的一个子集，返回值是一个路径的数组，每一条路径都是由节点的数组表示的。因此，bundle 布局并不直接计算基本的线条(the basis splines); 而是返回一个节点数组，隐含地表示线条的控制点(the control points). 你可以将这个数组和 d3.svg.line 或者 d3.svg.line.radial 联合起来使用，以生成线条(splines). 举个例子，如果你想要使用一个 cluster: 
 
 {% highlight javascript %}
 var cluster = d3.layout.cluster()
-    .size([2 * Math.PI, 500]);
-    {% endhighlight %}
-    
+	.size([2 * Math.PI, 500]);
+	{% endhighlight %}
 一个适合 hierarchical edge bundling 的线条生成器(line generator) 将会是这样的：
 
 {% highlight javascript %}
 var line = d3.svg.line.radial()
-    .interpolate("bundle")
-    .tension(.85)
-    .radius(function(d) { return d.y; })
-    .angle(function(d) { return d.x; });
+	.interpolate("bundle")
+	.tension(.85)
+	.radius(function(d) { return d.y; })
+	.angle(function(d) { return d.x; });
 {% endhighlight %}
 
 bundle 布局为和**线条生成器的 bundle 插值模式**(the line generator's "bundle" interpolation mode) 协作而生，虽然严格来讲你可以使用任何插值或形状生成器(interpolator or shape generator). Holten 的 bundle 的 strength 参数是由线条(line) 的 tension 决定的。
 
-## Cluster Layout 
+## Cluster Layout
 
 集群布局(cluster layout) 生产 dendrograms: 节点连接的图，相同深度的叶节点。举个例子，一个集群布局可以用来组织一个包结构里面的软件类（就像我们一直在讨论的那个图一样）：
 
-![](https://github.com/mbostock/d3/wiki/cluster.png)
+![][image-2]
 
 像 D3 中的其他类一样，布局遵循链式的方法调用。
 
@@ -116,10 +116,10 @@ This method is useful for retrieving a set of link descriptions suitable for dis
 
 {% highlight javascript %}
 svg.selectAll("path")
-    .data(cluster.links(nodes))  // 
-    .enter().append("path")
-    .attr("d", d3.svg.diagonal());
-    {% endhighlight %}
+	.data(cluster.links(nodes))  // 
+	.enter().append("path")
+	.attr("d", d3.svg.diagonal());
+	{% endhighlight %}
 
 
 cluster.**children**([*children*])
@@ -146,23 +146,22 @@ cluster.**value**([*value*])
 
 {% highlight javascript %}
 var diameter = 960,
-    radius = diameter / 2,
-    innerRadius = radius - 120;
-    
+	radius = diameter / 2,
+	innerRadius = radius - 120;
 var cluster = d3.layout.cluster()
-    .size([360, innerRadius])
-    .sort(null)
-    .value(function(d) { return d.size; });
+	.size([360, innerRadius])
+	.sort(null)
+	.value(function(d) { return d.size; });
 // 生成一个 cluster 布局，极坐标系，半径是 innerRadius = 360
 
 var bundle = d3.layout.bundle();  
 // 下面用到 bundle(links) 这种用法
 
 var line = d3.svg.line.radial()
-    .interpolate("bundle")
-    .tension(.85)
-    .radius(function(d) { return d.y; })
-    .angle(function(d) { return d.x / 180 * Math.PI; });
+	.interpolate("bundle")
+	.tension(.85)
+	.radius(function(d) { return d.y; })
+	.angle(function(d) { return d.x / 180 * Math.PI; });
 {% endhighlight %}
 
 首先是生成了一个集群(cluster) 布局，size 是
@@ -171,3 +170,19 @@ var line = d3.svg.line.radial()
 
 
 
+[1]:	http://bl.ocks.org/mbostock/1044242
+[2]:	http://bl.ocks.org/mbostock/7607999
+[3]:	http://ivanjiang.com/blog/2015/09/24/D3-SVG-Shapes/
+[4]:	http://ivanjiang.com/blog/2015/09/26/d3-ordinal-scales/
+[5]:	http://bl.ocks.org/mbostock/1044242
+[6]:	https://github.com/mbostock/d3/wiki/Cluster-Layout
+[7]:	https://github.com/mbostock/d3/wiki/Hierarchy-Layout
+[8]:	https://github.com/mbostock/d3/wiki/Bundle-Layout
+[9]:	http://ivanjiang.com/blog/2015/09/24/D3-SVG-Shapes/
+[10]:	https://github.com/mbostock/d3/wiki/Requests#d3_json
+[11]:	http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.220.8113&rep=rep1&type=pdf
+[12]:	http://bl.ocks.org/mbostock/1044242
+[13]:	https://github.com/mbostock/d3/wiki/Hierarchy-Layout
+
+[image-1]:	https://github.com/mbostock/d3/wiki/bundle.png
+[image-2]:	https://github.com/mbostock/d3/wiki/cluster.png

@@ -2,6 +2,9 @@
 layout: post
 title: MongoDB cursor.explain() 方法 - 学习笔记
 tags: [MongoDB, database]
+bannerContent: "mongodb-logo"
+bannerColor: "soil"
+description: "在这篇 blog 中，我翻译了一小段 MongoDB 的文档，包括 cursor.explain() 和 db.collection.explain().find() 两个方法的使用。"
 ---
 
 # cursor.explain()
@@ -16,25 +19,25 @@ tags: [MongoDB, database]
 
 默认情况下，`explain()` 方法在这个模式下执行。MongoDB 使用 *query optimizer* 来选择操作的 *winning plan*，`explain()` 方法返回 *queryPlanner* 的信息，参考下面的一个例子：
 
-    "queryPlanner" : {
-		"plannerVersion" : 1,
-		"namespace" : "myproject.phones",
-		"indexFilterSet" : false,
-		"parsedQuery" : {
-			"display" : {
-				"$eq" : "+2 021-556000"
-			}
-		},
-		"winningPlan" : {
-			"stage" : "COLLSCAN",
-			"filter" : {
-				"display" : {
-					"$eq" : "+2 021-556000"
-				}
-			},
-			"direction" : "forward"
-		},
-		"rejectedPlans" : [ ]
+	"queryPlanner" : {
+	    "plannerVersion" : 1,
+	    "namespace" : "myproject.phones",
+	    "indexFilterSet" : false,
+	    "parsedQuery" : {
+	        "display" : {
+	            "$eq" : "+2 021-556000"
+	        }
+	    },
+	    "winningPlan" : {
+	        "stage" : "COLLSCAN",
+	        "filter" : {
+	            "display" : {
+	                "$eq" : "+2 021-556000"
+	            }
+	        },
+	        "direction" : "forward"
+	    },
+	    "rejectedPlans" : [ ]
 	},
 
 ## executionStats Mode
@@ -62,4 +65,6 @@ tags: [MongoDB, database]
 
 `.explain().find()` 返回一个 cursor，要求调用 `.next()` 或者 `.finish()` 以返回 `.explain()` 结果。然而我也不知道这句话是什么意思。
 
-更详细的内容可以参阅官网的文档，[cursor.explain() - MongoDB Manual 3.0](http://docs.mongodb.org/manual/reference/method/cursor.explain/)。
+更详细的内容可以参阅官网的文档，[cursor.explain() - MongoDB Manual 3.0][1]。
+
+[1]:	http://docs.mongodb.org/manual/reference/method/cursor.explain/

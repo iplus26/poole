@@ -2,6 +2,8 @@
 layout: post
 title: Mac 使用手册
 description: "本文作为我的 Mac 使用手册的第一部分，一方面希望可以为初试 Mac 的小伙伴们提供一个入门指南，另一方面也作为我自己的一个梳理。"
+bannerContent: "finder-icon"
+bannerColor: "lightblue"
 tags: [Mac, iTunes, iWork]
 
 ---
@@ -21,9 +23,9 @@ Safari 非常好用，是我的主力浏览器。在 Windows 上，我的主力�
 
 Flash 费电，频繁弹出来的更新程序让人抓狂，并且从技术上看也即将被淘汰，比如 iPhone 从来就不支持这玩意儿，所以我在某一天决定删掉 Flash.
 
-因此我还是应该装一个 Chrome. 因为即使国外的绝大多数视频站和国内视频站的移动版都是用的 HTML 5 (这样他们才能支持 iPhone), 但国内大多数视频网站桌面版都是 Flash 格式的视频，而没用更先进的 HTML 5 格式。Chrome 内置了 Flash 可以供我们一时之需，在看视频的时候只需要在 Safari 菜单栏 > 开发 > 用...打开 > Google Chrome.
+因此我还是应该装一个 Chrome. 因为即使国外的绝大多数视频站和国内视频站的移动版都是用的 HTML 5 (这样他们才能支持 iPhone), 但国内大多数视频网站桌面版都是 Flash 格式的视频，而没用更先进的 HTML 5 格式。Chrome 内置了 Flash 可以供我们一时之需，在看视频的时候只需要在 Safari 菜单栏 \> 开发 \> 用...打开 \> Google Chrome.
 
-* [Chrome](https://www.google.com/chrome/)
+* [Chrome][1]
 
 我们将 Safari 作为 Mac 的主力浏览器，因此它应该是**可拓展的**，下面是我的 Safari 浏览器安装的插件。
 
@@ -56,9 +58,9 @@ Flash 费电，频繁弹出来的更新程序让人抓狂，并且从技术上�
 * QQ
 * 迅雷
 * 旺旺
-* 微信，这货只能在 [App Store](https://itunes.apple.com/us/app/wechat/id836500024?mt=12&ign-mpt=uo%3D4) 下载
+* 微信，这货只能在 [App Store][2] 下载
 
-###办公
+### 办公
 
 Apple 出品的 iWork 系列对于普通消费者来说非常好用，你真的需要那么牛逼的办公生产力吗？为了和 Windows 那帮人兼容，你可以将 Pages 和 Numbers 制作的文档和表格导出为 PDF 格式，购买 ThunderBlot 转 VGA 线以便在教室里播放你用 Keynote 制作的优美的 Presentation. 如果你实在需要 Word, PPT, Excel 的话，好吧，微软也提供了他们自己觉得很好用的 Office 2016, 确实比 2011 版本好用多了...
 
@@ -68,24 +70,24 @@ Apple 出品的 iWork 系列对于普通消费者来说非常好用，你真的�
 * Office for Mac 2016, 收费的工具
 
 
-###音乐 
+### 音乐
 
 * iTunes 是最好用的，可以玩一整天
 * 网易云音乐，在 Mac 平台饱受赞誉的国产软件，我用的很少啦
 
-###视频
+### 视频
 
 以下两个软件应该结合起来用，苹果自家的 QuickTime 一般被我用来**录制屏幕** (abuse), 但是 QuickTime 收拾微软的烂摊子还是挺好用的，比如解决 PowerPoint 音频视频放不出来这件事上。
 
-- [MPlayerX](http://mplayerx.org/)
-- [VLC](http://www.videolan.org/vlc/)
+- [MPlayerX][3]
+- [VLC][4]
 
-###压缩软件
+### 压缩软件
 
 Mac 和 Windows 因为字符格式不一样，压缩/解压可能会出现乱码，因此不建议用自带的压缩/解压软件，而是使用：
 
-* [Keka](http://kekaosx.com)
-* [Unarchiver](http://www.macupdate.com/app/mac/22774/the-unarchiver)
+* [Keka][5]
+* [Unarchiver][6]
 
 ### 便捷安装
 
@@ -93,23 +95,29 @@ Mac 和 Windows 因为字符格式不一样，压缩/解压可能会出现乱码
 
 首先安装迅雷，将 
 
->http://down.sandai.net/mac/thunder_dl2.6.7.1706_Beta.dmg
+> http://down.sandai.net/mac/thunder\_dl2.6.7.1706\_Beta.dmg
 
 复制到 Safari 浏览器地址栏中，回车开始下载，下载完了安装并打开。登录之后，新建任务，将以下的列表**一次性**复制到迅雷地址栏中。
 
->http://get.videolan.org/vlc/2.2.1/macosx/vlc-2.2.1.dmg
+> http://get.videolan.org/vlc/2.2.1/macosx/vlc-2.2.1.dmg
 
->http://iweb.dl.sourceforge.net/project/mplayerx-osx/MPlayerX-1.1.0.dmg
+> http://iweb.dl.sourceforge.net/project/mplayerx-osx/MPlayerX-1.1.0.dmg
 
->http://download.kekaosx.com/Keka-1.0.4-intel.dmg
+> http://download.kekaosx.com/Keka-1.0.4-intel.dmg
 
->http://dldir1.qq.com/qqfile/QQforMac/QQ_V4.0.4.dmg
+> http://dldir1.qq.com/qqfile/QQforMac/QQ\_V4.0.4.dmg
 
->http://dbison.alicdn.com/updates/macww-nosandbox-3.4.6-4346.dmg
+> http://dbison.alicdn.com/updates/macww-nosandbox-3.4.6-4346.dmg
 
->http://wakaba.c3.cx/releases/TheUnarchiver/TheUnarchiver3.10.1.dmg
+> http://wakaba.c3.cx/releases/TheUnarchiver/TheUnarchiver3.10.1.dmg
 
->http://s1.music.126.net/download/osx/NeteaseMusic_1.4.0_408_web.dmg
+> http://s1.music.126.net/download/osx/NeteaseMusic\_1.4.0\_408\_web.dmg
 
->https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
+> https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
 
+[1]:	https://www.google.com/chrome/
+[2]:	https://itunes.apple.com/us/app/wechat/id836500024?mt=12&ign-mpt=uo%3D4
+[3]:	http://mplayerx.org/
+[4]:	http://www.videolan.org/vlc/
+[5]:	http://kekaosx.com
+[6]:	http://www.macupdate.com/app/mac/22774/the-unarchiver

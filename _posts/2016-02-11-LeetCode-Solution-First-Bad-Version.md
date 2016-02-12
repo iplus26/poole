@@ -1,6 +1,9 @@
 ---
 layout: post
 title: LeetCode Solution - First Bad Version
+description: "有一段时间没有更新了，希望能够趁春节假期的最后两天，努力多刷几道 LeetCode，并且能够将 blog 的 UI 和主页统一起来。"
+bannerColor: "yellow"
+bannerContent: "leetcode-logo"
 tag: [LeetCode, Binary Search (二分查找)]
 ---
 有一段时间没有更新了，希望能够趁春节假期的最后两天，努力多刷几道 LeetCode, 并且能够将 blog 的 UI 和主页 [ivanjiang.com][1] 统一起来。

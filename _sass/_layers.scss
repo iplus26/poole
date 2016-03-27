@@ -1,0 +1,16 @@
+.site-header {
+	z-index: 90;
+}
+
+.site-footer {
+	position: relative;
+	z-index: -1;
+}
+
+.page-content {
+	z-index: 99;
+}
+
+.wechat-qrcode {
+	z-index: 999;
+}

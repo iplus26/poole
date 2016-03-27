@@ -1,32 +1,20 @@
-# Permalinks
+# Welcome to Jekyll!
 #
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-# Setup
-title:               Ivan Jiang's blog
-tagline:             so live ever - or else swoon to death.
-url:                 http://ivanjiang.com
-gems: 				       [jekyll-paginate, jekyll-gist]
-paginate:            1
-baseurl:             /blog
-description:         'Welcome to my blog. '
-comments:            true
+# Site settings
+title:        Ivan's blog
+permalink:    pretty
+email:        iplus26@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Hello! 我是姜希凡，网名 iplus26, 是一名前端开发者，目前在海豚浏览器实习。
+  欢迎找我交流前端 / Web 开发相关的知识，你可以直接通过微信与我联系。
+baseurl:      /blog # the subpath of your site, e.g. /blog
+url:          "http://ivanjiang.com" # the base hostname & protocol for your site
+github_username:  iplus26
 
-# Assets
-#
-# We specify the directory for Jekyll so we can use @imports.
-sass:
-  sass_dir:          _sass
-  style:            :compressed
-
-# About/contact
-author:
-  name:              Ivan Jiang
-  url:               http://ivanjiang.com
-  email:             iplus26@gmail.com
-
-# Custom vars
-version:             2.0.0
-github:
-  repo:              https://github.com/poole/poole
+# Build settings
+markdown: kramdown

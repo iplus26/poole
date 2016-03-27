@@ -1,7 +1,30 @@
-<div class="blog-bio">
-	<div class="footer-wrapper">
-		<div class="bio-avatar"></div>
-		<p>Hi! I'm <b>Ivan Jiang</b>. I write HTML, CSS & JavaScript, and am a web front end developer in China. I am now working at Mobotap, Inc (<a href="https://en.wikipedia.org/wiki/Dolphin_Browser">Dolphin Browser</a>) as an intern. </p>
-		<p>I do like creating things so I enjoy programming, particularly in web and application development. Feel free to say <a href="mailto:me@ivanjiang.com">hi</a>. </p>
-	</div>
-</div>
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">{{ site.title }}</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          <li class="github"><a href="//github.com/iplus26" target="_blank"></a></li>
+          <li class="so"><a href="//stackoverflow.com/users/4158282/iplus26" target="_blank"></a></li>
+          <li class="douban"><a href="//www.douban.com/people/iplus26/" target="_blank"></a></li>
+          <li class="wechat"><div class="wechat-qrcode"></div></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>{{ site.description }}</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>

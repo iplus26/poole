@@ -1,185 +1,146 @@
 body {
 	background: #F7FAFB;
+	color: #333;
 	font-family: sans-serif;
 	-webkit-font-smoothing: subpixel-antialiased;
 }
 
+.page-width {
+	max-width: 1140px;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
 /*
-    Site Header
- */
+Site Header
+*/
 
 .site-header {
+	padding-top: 1rem;
+	width: 100vw;
+	max-width: 100%;
+	background: rgba(255, 255, 255, .8);
+	border-bottom: 1px solid #e7e7e7;
+	min-height: 4.4rem;
 
-	.header {
-
-		color: #000;
-		width: 200px;
-
-		@include media-query($on-laptop) {
-			width: calc(100% - 40px);	
-		}
-
-		padding: 40px 20px;
-		border-bottom: 1px $grey-color-light solid;
+	.site-logo {
 		float: left;
-		background: #fff;
+		font-size: 2.2rem;
+		line-height: 2.2rem;
+		font-weight: 200;
+		display: inline-block;
+		background-image: url(../img/logo.png);
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+		background-position: left;
+		padding-left: 4rem;
+		color: #333;
 
-		.logo {
-			background: url(../img/me.png) center/contain no-repeat;
-			border-radius: 50%;
-			width: 110px;
-			height: 110px;
-			margin: 0 auto;
+		.tagline {
+			display: block;
+			font-size: 1rem;
+			line-height: 1.2rem;
+			color: #666;
+		}
+	}
+
+	.site-nav ul {
+		list-style: none;
+		text-align: right;
+		margin: 0;
+
+		li {
+			display: inline-block;
+			padding: 1rem 0 2rem 1.8rem;
 		}
 
+		.mobile-nav {
+			display: none;
+		}
 	}
 
-	h1, h2 {
-		margin: 0;
-		text-align: center;
-	}
+	// #mobile-menu {
+	// 	display: none;
+	// 	width: 3rem;
+	// 	line-height: 100%;
+	// 	background-image: url(../img/expand.png);
+	// 	background-repeat: no-repeat;
+	// 	background-position: center;
+	// 	background-size: contain;
+	// 	padding-bottom: 1rem;
+	// }
 
-	h1 {
-		font-weight: 300;
-		margin-top: 10px;
-	}
+	@include media-query($mobile) {
+		/*
+		Hide the navbar of the header when it comes to the mobile phones and pads.
+		 */
+		 .site-nav ul {
+		 	display: none;
+		 }
 
-	h2 {
-		font-size: 13px;
-		font-family: Georgia, serif;
+		 // #mobile-menu {
+			// display: inline-block;
+		 // }
 	}
 }
 
 
 /*
-     Page Content
- */
+Page Content
+*/
 
 .page-content {
-	border: 1px $grey-color-light solid;
-	border-top: none;
-	box-shadow: 0px 0px 15px $grey-color-light;
-	float: left;
-	width: 600px;
-	width: calc(100% - 240px - 80px - 240px - 2px);
-	min-height: 1vh;
-
-	@include media-query($on-laptop) {
-		width: calc(100% - 80px);
-		border-left: none;
-		border-right: none;
-		min-height: auto;
-	}
-
 	background: #fff;
-	padding: 40px 40px;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 }
 
-.post-list {
-
+/*
+Index Page List
+ */
+ul.post-list {
 	list-style: none;
-	margin-left: 0;
+	margin: 0;
+	width: 80%;
+	margin: 0 auto;
 
-	& > li {
-		padding: 0;
+	li {
+		display: block;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		padding: 1rem;
+		background: #fff;
+		border: 1px solid #e7e7e7;
+	}
 
-		h2 {
-			font-size: 18px;
+	@include media-query($mobile) {
+
+		width: 100%;
+
+		li {
+			margin: .3rem auto;
 		}
 	}
 
 }
 
 /*
-     Site Footer 
- */
+Site Footer 
+*/
 
 .site-footer {
 
+	border-top: 1px solid #e7e7e7;
 	background: #fff;
-	float: left;
-	width: 200px;
-
-	@include media-query($on-laptop) {
-		width: calc(100% - 40px);
-	}
-	padding: 40px 20px;
-	border-bottom: 1px $grey-color-light solid;
-	font-size: 14px;
-
-	p {
-		text-align: justify;
-	}
+	font-size: .8rem;
 
 	ul {
 		list-style: none;
-		margin-left: 0;
+		margin: 1rem 0;
 
 		& > li {
-			padding: 0;
-		}
-	}
-
-	ul.social-media-list {
-
-		& > li {
-			display: inline-block;
-			position: relative;
-			width: 20px;
-			height: 20px;
-			background-repeat: no-repeat;
-			background-position: center;
-			background-size: contain;
-			background-color: $grey-color;
-
-			& > a {
-				width: 20px;
-				height: 20px;
-				display: inline-block;
-			}
-
-			&:hover {
-				background-color: $grey-color-dark;
-			}
-
-			&.github { background-image: url(../img/github.png); }
-			&.so     { background-image: url(../img/so.png); background-size: 80%;}
-			&.wechat { 
-				background-image: url(../img/wechat.png);
-
-				& > .wechat-qrcode {
-					background-image: url(../img/qrcode.jpg);
-					background-size: contain;
-					background-position: center;
-					background-repeat: no-repeat;
-					width: 200px;
-					height: 200px;
-					position: absolute;
-					top: 25px;
-					left: -80px;
-					transform: scale(0);
-					padding: 10px;
-					border: 3px #fff solid;
-					box-shadow: 0 0 10px $grey-color;
-					transform-origin: center top;
-					transition: all .3s ease-in-out;
-				}
-
-				&:hover > .wechat-qrcode {
-					transform: scale(.8);
-				}
-			}
-
-			&.douban { 
-				& > a:after { 
-					content: '豆'; 
-					position: absolute; 
-					top: 0; left: 0;
-					width: 20px;
-					text-align: center;
-					color: #fff;
-				}
-			}
+			display: inline;
+			padding: 0 1rem 0 0;
 		}
 	}
 }

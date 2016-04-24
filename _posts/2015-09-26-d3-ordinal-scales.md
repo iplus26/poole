@@ -2,8 +2,7 @@
 layout: post
 tag: [D3, JavaScript, visualization (可视化)]
 title: D3 Ordinal Scales
-bannerContent: "d3-logo"
-bannerColor: "green"
+image: d3
 description: "本文是我在学习 D3.js 过程中对其文档中 Ordinal Scales 部分的中文翻译，供各位学习交流。"
 ---
 

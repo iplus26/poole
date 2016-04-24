@@ -2,8 +2,7 @@
 layout: post
 tag: [Jekyll, Poole, Disqus, GitHub Pages]
 title: 使用 Jekyll 和 Poole 快速搭建 blog 以及评论
-bannerContent: "jekyll-logo"
-bannerColor: "gray"
+image: "jekyll"
 description: "本篇文章是我在使用 Jekyll 和 Poole 搭建博客时候记的笔记，记录了我安装的过程和其中遇到的一些问题（比如如何加入 Disqus 评论框）。"
 ---
 

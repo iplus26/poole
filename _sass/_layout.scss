@@ -105,12 +105,25 @@ ul.post-list {
 	margin: 0 auto;
 
 	li {
+		color: inherit;
 		display: block;
 		margin-top: 1rem;
 		margin-bottom: 1rem;
 		padding: 1rem;
-		background: #fff;
+		background-color: #fff;
 		border: 1px solid #e7e7e7;
+
+		/*
+		Background images defined in `_banner.scss` 
+		 */
+		background-position: 1rem;
+		background-size: 3.8rem auto;
+		background-repeat: no-repeat;
+		padding-left: 6rem;
+	}
+
+	a:link, a:visited {
+		color: inherit;
 	}
 
 	@include media-query($mobile) {

@@ -2,6 +2,7 @@
 layout: post
 title: jQuery 源码学习 (1) - $.each(), $.map(), $.proxy()
 description: "想到作为一个前端没有读过 jQuery 的源码实属遗憾，决心花时间学习一下。"
+image: jQuery
 tags: [jQuery, JavaScript]
 ---
 前段时间刷掉了[《JavaScript 设计模式与开发实践》](http://book.douban.com/subject/26382780/)，是腾讯团队出品，难得的国内作者的精品技术书。想到作为一个前端没有读过 jQuery 的源码实属遗憾，决心花时间学习一下。

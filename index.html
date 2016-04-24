@@ -9,11 +9,13 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts %}
       <li class="{{ post.image | append: '_banner' | downcase }}">
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <span class="post-meta">{{ post.date | date: "%Y年%-m月%-d日" }}{% for tag in post.tag %}, {{ tag }}{% endfor %}
+          </span>
         </h2>
+        <p>{{ post.description }}</p>
+        <p><a href="{{ post.url | prepend: site.baseurl }}">继续阅读 >> </a></p>
       </li>
     {% endfor %}
   </ul>

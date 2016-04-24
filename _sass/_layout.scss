@@ -111,19 +111,32 @@ ul.post-list {
 		margin-bottom: 1rem;
 		padding: 1rem;
 		background-color: #fff;
-		border: 1px solid #e7e7e7;
+		border-bottom: 1px dashed #e7e7e7;
 
 		/*
 		Background images defined in `_banner.scss` 
 		 */
-		background-position: 1rem;
+		background-position: 1rem 1rem;
 		background-size: 3.8rem auto;
 		background-repeat: no-repeat;
 		padding-left: 6rem;
 	}
 
-	a:link, a:visited {
-		color: inherit;
+	li:last-child {
+		border-bottom: none;
+	}
+
+	h2 {
+
+		a:link, a:visited {
+			color: inherit;
+		}
+	}
+
+	.post-meta {
+		color: #666;
+		font-size: .8rem;
+		display: block;
 	}
 
 	@include media-query($mobile) {
@@ -132,6 +145,9 @@ ul.post-list {
 
 		li {
 			margin: .3rem auto;
+			padding: 5.8rem .2rem .2rem;
+			background-position: center .5rem;
+			background-size: auto 5rem;
 		}
 	}
 
@@ -146,13 +162,15 @@ Site Footer
 	border-top: 1px solid #e7e7e7;
 	background: #fff;
 	font-size: .8rem;
+	padding-bottom: 1rem;
 
 	ul {
 		list-style: none;
-		margin: 1rem 0;
+		padding: 0;
+		margin: 1rem 0 0;
 
 		& > li {
-			display: inline;
+			display: inline-block;
 			padding: 0 1rem 0 0;
 		}
 	}
